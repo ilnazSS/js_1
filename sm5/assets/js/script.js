@@ -1,10 +1,20 @@
-let y = Number(prompt('Сколько блоков будет на сайте?'))
+// let i = 3
 
-// y++
+// while (i > 0) {
+//     alert(i)
+//     i--
+// }
 
-for (let x = 0; x < y; x++ ){
-    let forbox = document.querySelector('.container')
-    forbox.style.borderRadius = '30px'
-    forbox.style.Color = 'red'
-    forbox.innerHTML = x
-}
+// for(let i = 0; i<5; i++){
+//     alert(i)
+// }
+
+let input = prompt('Введите значение')
+
+const blocks = document.querySelector('.blocks')
+let box ='<div class="box"></div>'
+
+for (let number = 0; number < input; number++) {
+    let box ='<div class="box"></div>'
+    blocks.insertAdjacentHTML('beforeend', box)
+}                                           
