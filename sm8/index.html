@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>sm8</title>
+</head>
+<body>
+    <button class="button">Кнопка</button>
+    <button class="button2">Кнопка2</button>
+    <button class="button3">Кнопка3</button>
+    <button class="button4">Кнопка4</button>
+    <button class="button5">Кнопка5</button>
+    <button class="button6">Кнопка6</button>
+    <button class="button7">Кнопка7</button>
+
+    <script>
+        let button = document.querySelector('.button')
+        button.addEventListener('mousedown', ()=>{
+            console.log('нажата кнопка')
+        })
+        let button2 = document.querySelector('.button2')
+        button.addEventListener('mouseup', ()=>{
+            console.log('кнопка отжата')
+        })
+        let button3 = document.querySelector('.button3')
+        button.addEventListener('mouseover', ()=>{
+            console.log('наведение на кнопку')
+        })
+        let button4 = document.querySelector('.button4')
+        button.addEventListener('mouseout', ()=>{
+            console.log('отведение от кнопки')
+        })
+        let button5 = document.querySelector('.button5')
+        button.addEventListener('mousemove', ()=>{
+            console.log('отведение от кнопки')
+        })
+        let button6 = document.querySelector('.button6')
+        button.addEventListener('dblclick', ()=>{
+            console.log('двойной щелчок')
+        })
+        let button7 = document.querySelector('.button7')
+        button.addEventListener('contextmenu', ()=>{
+            console.log('контекстное меню')
+        })
+    </script>
+</body>
+</html>
