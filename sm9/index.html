@@ -4,18 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="body">
+    r - red,
+    g - green,
+    b - blue
+
+    <div class="box">
+
+    </div>
     <script>
         document.addEventListener('keydown', function(event){
+            if(event.key.toLowerCase() == 'w'){
+                let box = document.querySelector('.box')
+                box.style.top = box.offsetTop - 1 + 'px'
+            }
+        })
+        document.addEventListener('keydown', function(event){
+            if(event.key.toLowerCase() == 's'){
+                let box = document.querySelector('.box')
+                box.style.top = box.offsetTop + 1 + 'px'
+            }
+        })
+        document.addEventListener('keydown', function(event){
             if(event.key.toLowerCase() == 'a'){
-                console.log('Нажата кнопка а')
+                let box = document.querySelector('.box')
+                box.style.left = box.offsetLeft - 1 + 'px'
+            }
+        })
+        document.addEventListener('keydown', function(event){
+            if(event.key.toLowerCase() == 'd'){
+                let box = document.querySelector('.box')
+                box.style.left = box.offsetLeft + 1 + 'px'
+            }
+        })
+
+
+        document.addEventListener('keydown', function(event){
+            if(event.key.toLowerCase() == 'r'){
+                let body = document.querySelector('.body')
+                body.style.background = 'red'
             }
         })
         document.addEventListener('keyup', function(event){
-            if(event.key == 'a'){
-                console.log('Отжата кнопка а')
+            if(event.key.toLowerCase() == 'r'){
+                let body = document.querySelector('.body')
+                body.style.background = 'white'
+            }
+        })
+        document.addEventListener('keyup', function(event){
+            if(event.key == 'g'){
+                let body = document.querySelector('.body')
+                body.style.background = 'white'
+            }
+        })
+        document.addEventListener('keydown', function(event){
+            if(event.key.toLowerCase() == 'g'){
+                let body = document.querySelector('.body')
+                body.style.background = 'green'
+            }
+        })
+        document.addEventListener('keyup', function(event){
+            if(event.key == 'b'){
+                let body = document.querySelector('.body')
+                body.style.background = 'white'
+            }
+        })
+        document.addEventListener('keydown', function(event){
+            if(event.key.toLowerCase() == 'b'){
+                let body = document.querySelector('.body')
+                body.style.background = 'blue'
             }
         })
 

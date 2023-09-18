@@ -8,42 +8,63 @@
     <title>sm8</title>
 </head>
 <body>
-    <button class="button">Кнопка</button>
-    <button class="button2">Кнопка2</button>
-    <button class="button3">Кнопка3</button>
-    <button class="button4">Кнопка4</button>
-    <button class="button5">Кнопка5</button>
-    <button class="button6">Кнопка6</button>
-    <button class="button7">Кнопка7</button>
+    <button class="button">нажмите</button>
+    <button class="button2">нажмите и отпустите</button>
+    <button class="button3">наведите</button>
+    <button class="button4">отведите</button>
+    <button class="button5">наведите(move)</button>
+    <button class="button6">щелкните два раза</button>
+    <button class="button7">контекстное меню</button>
 
     <script>
+
+        function getRandomInt(max){
+            return Math.floor(Math.random() * max)
+        }
+
         let button = document.querySelector('.button')
         button.addEventListener('mousedown', ()=>{
-            console.log('нажата кнопка')
+            button.style.background = 'red'
         })
         let button2 = document.querySelector('.button2')
-        button.addEventListener('mouseup', ()=>{
-            console.log('кнопка отжата')
+        button2.addEventListener('mouseup', ()=>{
+            button2.style.background = 'red'
         })
         let button3 = document.querySelector('.button3')
-        button.addEventListener('mouseover', ()=>{
-            console.log('наведение на кнопку')
+        button3.addEventListener('mouseover', ()=>{
+            button3.style.background = 'red'
+        })
+        button3.addEventListener('mouseout', ()=>{
+            button3.style.background = 'grey'
         })
         let button4 = document.querySelector('.button4')
-        button.addEventListener('mouseout', ()=>{
-            console.log('отведение от кнопки')
+        button4.addEventListener('mouseout', ()=>{
+            button4.style.background = 'red'
+        })
+        button4.addEventListener('mouseover', ()=>{
+            button4.style.background = 'grey'
         })
         let button5 = document.querySelector('.button5')
-        button.addEventListener('mousemove', ()=>{
-            console.log('отведение от кнопки')
+        button5.addEventListener('mousemove', ()=>{
+            console.log(getRandomInt(999))
+            button5.style.background = `rgb(${getRandomInt(999)}, ${getRandomInt(999)},${getRandomInt(999)})`
+        })
+        button5.addEventListener('mouseout', ()=>{
+            button5.style.background = 'grey'
         })
         let button6 = document.querySelector('.button6')
-        button.addEventListener('dblclick', ()=>{
-            console.log('двойной щелчок')
+        button6.addEventListener('dblclick', ()=>{
+            button6.style.background = 'red'
+        })
+        button6.addEventListener('mouseout', ()=>{
+            button6.style.background = 'grey'
         })
         let button7 = document.querySelector('.button7')
-        button.addEventListener('contextmenu', ()=>{
-            console.log('контекстное меню')
+        button7.addEventListener('contextmenu', ()=>{
+            button7.style.background = 'red' 
+        })
+        button7.addEventListener('mouseout', ()=>{
+            button7.style.background = 'grey'
         })
     </script>
 </body>
