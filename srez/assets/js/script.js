@@ -137,7 +137,7 @@ function addArray(){
         name: inputTitle.value,
         author: inputDate.value,
         time: data,
-        public_status: true
+        public_status: false
     }
     console.log(object)
         news.push(object)   
